@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
         mainViewPager.adapter = mAdapter
 
 //        뷰페이저도 재사용성이 적용됨. 2~3장의 화면을 가지고, 프래그먼트를 상황에 따라 새로 만들거나
-//        함수 추가 호출하는 등의 동작
+//        함수 추가 호출하는 등의 동작이 실제로 돌아감.
 
-//        3장 or 4장 등 원하는 페이지수 전체를 메모리에 유지하게 하는 명령어
+//        그래서 3장 or 4장 등 원하는 페이지수 전체를 메모리에 유지하게 하는 명령어를 추가해준다.
         mainViewPager.offscreenPageLimit = 3
 
     }
