@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
 //        그래서 3장 or 4장 등 원하는 페이지수 전체를 메모리에 유지하게 하는 명령어를 추가해준다.
         mainViewPager.offscreenPageLimit = 3
 
+//        탭레이아웃 / 뷰페이저 연결
+        mainTabLayout.setupWithViewPager(mainViewPager)
+
     }
 
 }
