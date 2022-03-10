@@ -11,15 +11,24 @@ class MainViewPagerAdpter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence? {
 
-        if (position == 0) {
-            return "이름"
+//        return when 문법 사용해서 효율적으로 코딩
+        return when(position) {
+            
+            0 -> "이름"
+            1 -> "내 정보"
+            else -> "인사말"
+            
         }
-        else if (position == 1) {
-            return "내 정보"
-        }
-        else {
-            return "인사말"
-        }
+
+//        if (position == 0) {
+//            return "이름"
+//        }
+//        else if (position == 1) {
+//            return "내 정보"
+//        }
+//        else {
+//            return "인사말"
+//        }
 
     }
 
@@ -31,21 +40,29 @@ class MainViewPagerAdpter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
 
-        if (position == 0) {
+        return when(position){
 
-            return MyNameFragment()
-
-        }
-        else if (position == 1) {
-
-            return  MyInfoFragment()
+            0 -> MyNameFragment()
+            1 -> MyInfoFragment()
+            else -> HelloFragment()
 
         }
-        else {
 
-            return  HelloFragment()
-
-        }
+//        if (position == 0) {
+//
+//            return MyNameFragment()
+//
+//        }
+//        else if (position == 1) {
+//
+//            return  MyInfoFragment()
+//
+//        }
+//        else {
+//
+//            return  HelloFragment()
+//
+//        }
 
     }
 
