@@ -32,11 +32,14 @@ class MainViewPagerAdpter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
     }
 
-    override fun getCount(): Int {
+//    getCount 함수의 결과도 곧바로 수식으로 표현 가능하다.
+    override fun getCount() = 3
 
-        return 3
-
-    }
+//    override fun getCount(): Int {
+//
+//        return 3
+//
+//    }
 
     override fun getItem(position: Int): Fragment {
 
